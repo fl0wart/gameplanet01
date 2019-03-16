@@ -2,7 +2,7 @@ import asyncio
 import discord
 from discord.ext.commands import Bot
 
-bot.loop.create_task(status_task())
+Bot.loop.create_task(status_task())
 
 Mike = Bot('gp!')
 
