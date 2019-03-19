@@ -8,7 +8,7 @@ Mike = Bot('gp!')
 @Mike.event
 async def on_ready():
     print ("Starting up")
-    print ("My username is " + bot.user.name + " and i am running with the ID: " + bot.user.id)
+    print ("My username is " + Mike.user.name + " and i am running with the ID: " + Mike.user.id)
     await Mike.change_presence(game=discord.Game(name="the users", type=3))
     print ("Started")
     
