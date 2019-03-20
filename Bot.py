@@ -9,7 +9,7 @@ Mike = Bot('gp!')
 async def on_ready():
     print ("Starting up")
     print ("My username is " + Mike.user.name + " and i am running with the ID: " + Mike.user.id)
-    await Mike.change_presence(game=discord.Game(name="Instagram: @gameplanet_official", type=1))
+    await Mike.change_presence(game=discord.Game(name="IG: @gameplanet_official", type=1))
     print ("Started")
     
 @Mike.command(pass_context = True)
