@@ -13,6 +13,7 @@ async def on_ready():
     print ("Started")
     
 Mike.remove_command('help')
+
 @Mike.command(pass_context = True)
 async def say(ctx, *args):
     mesg = ' '.join(args)
