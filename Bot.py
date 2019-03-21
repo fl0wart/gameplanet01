@@ -12,6 +12,7 @@ async def on_ready():
     await Mike.change_presence(game=discord.Game(name="IG: @gameplanet_official", type=1))
     print ("Started")
     
+bot.remove_command('help')
 @Mike.command(pass_context = True)
 async def say(ctx, *args):
     mesg = ' '.join(args)
