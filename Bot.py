@@ -20,4 +20,11 @@ async def say(ctx, *args):
     await Mike.delete_message(ctx.message)
     return await Mike.say(mesg)
 
+@Mike.command(pass_context = True)
+async def announce(ctx, channel: discord.Channel=None, *, msg: str):
+    r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+    embed=discord.Embed(title="description="{}".format(msg), color = discord.Color((r << 16) + (g << 8) + b))
+    await client.send_message(channel, embed=embed)
+    await client.delete_message(ctx.message)
+    
 Mike.run('NTU2Mzc1NDg1NjM5MTYzOTI1.D241eA.mX9gcWly0SQn9yLIEzSCtwwmdRQ')
