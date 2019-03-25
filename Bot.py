@@ -17,5 +17,12 @@ async def say(ctx, *args):
     mesg = ' '.join(args)
     await bot.delete_message(ctx.message)
     return await bot.say(mesg)
-   
+  
+@bot.command(pass_context = True)
+@commands.has_permissions(administrator=True) 
+async def announce2(ctx, channel: discord.Channel=None, *, msg: str):
+    embed=discord.Embed(description="{}".format(msg),color=0x00ffff)
+    await bot.send_message(channel, embed=embed)
+    await bot.delete_message(ctx.message)
+    
 bot.run('NTU2Mzc1NDg1NjM5MTYzOTI1.D241eA.mX9gcWly0SQn9yLIEzSCtwwmdRQ')
